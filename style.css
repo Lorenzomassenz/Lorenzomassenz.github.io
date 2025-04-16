@@ -2,17 +2,19 @@ body {
     font-family: sans-serif;  
     margin: 0;  
     padding: 0;  
-    background-color: #f0f0f0;  
+    background-color: #0a0a0a; /* Sfondo scuro */  
+    color: #39ff14; /* Verde terminale */  
 }  
 
 header {  
-    background-color: #ddd;  
+    background-color: #1a1a1a;  
     padding: 20px;  
     text-align: center;  
+    border-bottom: 1px solid #39ff14;  
 }  
 
 nav {  
-    background-color: #eee;  
+    background-color: #333;  
     padding: 10px;  
 }  
 
@@ -28,6 +30,11 @@ nav li {
     margin: 0 10px;  
 }  
 
+nav a {  
+    color: #39ff14;  
+    text-decoration: none;  
+}  
+
 main {  
     padding: 20px;  
 }  
@@ -36,9 +43,16 @@ section {
     margin-bottom: 30px;  
 }  
 
+img {  
+    max-width: 100%;  
+    height: auto;  
+    margin-bottom: 15px;  
+}  
+
 footer {  
-    background-color: #333;  
-    color: white;  
+    background-color: #1a1a1a;  
+    color: #39ff14;  
     text-align: center;  
     padding: 10px;  
-}  
+    border-top: 1px solid #39ff14;  
+} 
