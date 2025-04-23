@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -6,72 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chernobyl - Il Disastro Nucleare</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Chernobyl</h1>
-        <p>Il disastro nucleare del 26 aprile 1986</p>
+    <!-- Overlay effetto scanlines -->
+    <div class="scanlines"></div>
+
+    <!-- Intestazione -->
+    <header class="top-bar">
+        <div class="date-display">
+            Data: <span id="current-date"></span>
+        </div>
+        <div class="autore">
+            Massenz, Dal Pezzo, 5CI
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#introduzione">Introduzione</a></li>
-            <li><a href="#cronologia">Cronologia</a></li>
-            <li><a href="#conseguenze">Conseguenze</a></li>
-            <li><a href="#zona">Zona di Esclusione</a></li>
-            <li><a href="#galleria">Galleria Foto</a></li>
-            <li><a href="#testimonianze">Testimonianze</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="introduzione">
-            <h2>Introduzione</h2>
-            <p>Il 26 aprile 1986, alle 01:23, il reattore numero 4 della centrale nucleare di Chernobyl esplose, causando il peggior disastro nucleare della storia.</p>
-            <img src="placeholder.jpg" alt="Centrale di Chernobyl dopo l'esplosione">
-            <p>La centrale era situata vicino a Pripyat...</p>
-        </section>
-
-        <section id="cronologia">
-            <h2>Cronologia</h2>
-            <ul>
-                <li><strong>26/04/1986, 01:23:45:</strong> Esplosione del reattore</li>
-                <li><strong>27/04/1986:</strong> Inizio evacuazione di Pripyat</li>
-            </ul>
-        </section>
-
-        <section id="conseguenze">
-            <h2>Conseguenze</h2>
-            <ul>
-                <li>31 morti immediate</li>
-                <li>Migliaia di persone evacuate</li>
-                <li>Contaminazione ambientale estesa</li>
-            </ul>
-        </section>
-
-        <section id="zona">
-            <h2>Zona di Esclusione</h2>
-            <p>La Zona di Esclusione di Chernobyl è un'area di circa 2.600 km²...</p>
-            <img src="pripyat.jpg" alt="Pripyat oggi">
-        </section>
-
-        <section id="galleria">
-            <h2>Galleria Foto</h2>
-            <div class="gallery">
-                <img src="foto1.jpg" alt="Foto 1">
-                <img src="foto2.jpg" alt="Foto 2">
+    <div class="container">
+        <!-- Menu laterale -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>CHERNOBYL</h3>
+                <div class="status">
+                    <div class="status-dot"></div>
+                    <span>ARCHIVIO STORICO</span>
+                </div>
             </div>
-        </section>
 
-        <section id="testimonianze">
-            <h2>Testimonianze</h2>
-            <blockquote>"Eravamo spaventati, nessuno ci diceva cosa stava succedendo..."</blockquote>
-            <cite>Viktor, ex residente di Pripyat</cite>
-        </section>
-    </main>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-section="introduzione">Introduzione</li>
+                    <li data-section="cronologia">Cronologia</li>
+                    <li data-section="conseguenze">Conseguenze</li>
+                    <li data-section="zona">Zona di Esclusione</li>
+                    <li data-section="galleria">Galleria Foto
+                        <ul class="submenu">
+                            <li>1986 - Disastro</li>
+                            <li>1990s - Abbandono</li>
+                            <li>Oggi - Turismo</li>
+                        </ul>
+                    </li>
+                    <li data-section="testimonianze">Testimonianze</li>
+                </ul>
+            </nav>
+        </aside>
 
-    <footer>
-        <p>© 2025 Chernobyl Archive</p>
-    </footer>
+        <!-- Contenuto principale -->
+        <main class="content">
+            <!-- Sezione Introduzione -->
+            <section id="introduzione" class="active">
+                <h1>CHERNOBYL</h1>
+                <h2>Il disastro nucleare del 26 aprile 1986</h2>
+
+                <div class="content-block">
+                    <p class="importante">Il 26 aprile 1986, alle 01:23, il reattore numero 4 della centrale nucleare di Chernobyl esplose durante un test di sicurezza, causando il peggior disastro nucleare della storia.</p>
+
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            Immagine della centrale dopo l'esplosione
+                        </div>
+                    </div>
+
+                    <h3>La centrale nucleare</h3>
+                    <ul class="info-list">
+                        <li><strong>Posizione:</strong> Ucraina settentrionale (allora parte dell'URSS)</li>
+                        <li><strong>Tipo di reattore:</strong> RBMK-1000</li>
+                        <li><strong>Potenza:</strong> 1000 MW per reattore</li>
+                        <li><strong>Anno costruzione:</strong> 1977-1983</li>
+                    </ul>
+
+                    <p>La centrale era situata vicino alla città di Pripyat, fondata appositamente nel 1970 per ospitare i lavoratori dell'impianto e le loro famiglie. Al momento del disastro, Pripyat contava circa 49.000 abitanti.</p>
+                </div>
+            </section>
+
+            <section id="cronologia">  
+                <h1>Cronologia del Disastro</h1>  
+                <div class="timeline">  
+                    <div class="timeline-item">  
+                        <div class="timeline-icon"></div>  
+                        <div class="timeline-content">  
+                            <span class="timeline-date">25/04/1986 - 13:05</span>  
+                            <h3>Preparazione del test</h3>  
+                            <p>Inizia la preparazione per un test di sicurezza sul reattore n.4.</p>  
+                            <a href="#" class="timeline-read-more">Leggi di più</a>  
+                        </div>  
+                    </div>  
+                    <div class="timeline-item">  
+                        <div class="timeline-icon"></div>  
+                        <div class="timeline-content">  
+                            <span class="timeline-date">26/04/1986 - 01:23:04</span>  
+                            <h3>Inizio del test</h3>  
+                            <p>Il personale inizia il test, nonostante il reattore sia in condizioni instabili.</p>  
+                            <a href="#" class="timeline-read-more">Leggi di più</a>  
+                        </div>  
+                    </div>  
+                    <div class="timeline-item">  
+                        <div class="timeline-icon"></div>  
+                        <div class="timeline-content">  
+                            <span class="timeline-date">26/04/1986 - 01:23:45</span>  
+                            <h3>Esplosione</h3>  
+                            <p>Il reattore raggiunge livelli di potenza incontrollabili.</p>  
+                            <a href="#" class="timeline-read-more">Leggi di più</a>  
+                        </div>  
+                    </div>  
+                    <div class="timeline-item">  
+                        <div class="timeline-icon"></div>  
+                        <div class="timeline-content">  
+                            <span class="timeline-date">27/04/1986 - 14:00</span>  
+                            <h3>Evacuazione</h3>  
+                            <p>Inizia l'evacuazione di Pripyat.</p>  
+                            <a href="#" class="timeline-read-more">Leggi di più</a>  
+                        </div>  
+                    </div>  
+                </div>  
+            </section>  
+
+            <!-- Sezione Conseguenze -->
+            <section id="conseguenze">
+                <h1>Conseguenze</h1>
+
+                <div class="content-block">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-number">31</div>
+                            <div class="stat-label">Morti immediate</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">350.000+</div>
+                            <div class="stat-label">Persone evacuate</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">4.000-60.000</div>
+                            <div class="stat-label">Morti stimate totali</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">2.600 km²</div>
+                            <div class="stat-label">Zona di esclusione</div>
+                        </div>
+                    </div>
+
+                    <h3>Impatto sulla salute</h3>
+                    <p>Le conseguenze sanitarie includono:</p>
+                    <ul>
+                        <li>Aumento dei casi di cancro alla tiroide nei bambini</li>
+                        <li>Malattie da radiazioni acute tra i primi soccorritori</li>
+                        <li>Effetti psicologici a lungo termine</li>
+                        <li>Contaminazione del suolo e delle acque in vaste aree</li>
+                    </ul>
+
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            Mappa della contaminazione radioattiva
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sezione Zona di Esclusione -->
+            <section id="zona">
+                <h1>Zona di Esclusione</h1>
+
+                <div class="content-block">
+                    <p class="importante">La Zona di Esclusione di Chernobyl è un'area di circa 2.600 km² che circonda la centrale nucleare, creata dopo l'evacuazione delle comunità locali.</p>
+
+                    <div class="location-grid">
+                        <div class="location-card">
+                            <h3>Pripyat</h3>
+                            <div class="image-placeholder small">
+                                Immagine di Pripyat
+                            </div>
+                            <p>Città fantasma, evacuata il 27 aprile 1986. Contava 49.000 abitanti, principalmente lavoratori della centrale e famiglie.</p>
+                        </div>
+
+                        <div class="location-card">
+                            <h3>Foresta Rossa</h3>
+                            <div class="image-placeholder small">
+                                Immagine della Foresta Rossa
+                            </div>
+                            <p>Area di pineta che ricevette le dosi più alte di radiazioni. Gli alberi morirono e assunsero un colore rosso-marrone.</p>
+                        </div>
+
+                        <div class="location-card">
+                            <h3>Nuovo Confinamento Sicuro</h3>
+                            <div class="image-placeholder small">
+                                Immagine del sarcofago
+                            </div>
+                            <p>Struttura completata nel 2016 per contenere il reattore danneggiato. Sostituisce il "sarcofago" originale costruito nel 1986.</p>
+                        </div>
+                    </div>
+
+                    <h3>Natura e fauna</h3>
+                    <p>Paradossalmente, l'assenza umana ha permesso alla natura di prosperare. La zona ospita oggi lupi, orsi, bisonti europei, alci e numerose specie di uccelli.</p>
+                </div>
+            </section>
+
+            <!-- Sezione Galleria (placeholder) -->
+            <section id="galleria">
+                <h1>Galleria Fotografica</h1>
+
+                <div class="content-block">
+                    <p>Seleziona un periodo dal menu per visualizzare le fotografie.</p>
+
+                    <div class="gallery-placeholder">
+                        <p>Seleziona un periodo dal menu laterale</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sezione Testimonianze -->
+            <section id="testimonianze">
+                <h1>Testimonianze</h1>
+
+                <div class="content-block">
+                    <div class="testimonianza">
+                        <blockquote>
+                            Il giorno dopo l'esplosione, siamo andati a fare un picnic. Eravamo felici, cantavamo canzoni. Nessuno ci ha detto nulla. La gente parlava di un incendio, ma niente di più."
+                        </blockquote>
+                        <cite>— Lyubov Kovalevskaia (ex residente di Pripyat)</cite>
+                    </div>
+
+                    <div class="testimonianza">
+                        <blockquote>
+                            "Ho visto... ho visto il reattore aperto. Brillava. Era una luce blu-violetta. Indimenticabile. Ho avuto la sensazione di essere di fronte a qualcosa di ultraterreno."
+                        </blockquote>
+                        <cite>— Oleksiy Breus (operatore della centrale di Chernobyl)</cite>
+                    </div>
+
+                    <div class="testimonianza">
+                        <blockquote>
+                            "La cosa più terribile è stata vedere la sofferenza delle persone. I pompieri, i lavoratori... Giovani, forti, che morivano in modo terribile."
+                        </blockquote>
+                        <cite>—Mikhail Umanets (direttore della centrale di ChernobyL)</cite>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
