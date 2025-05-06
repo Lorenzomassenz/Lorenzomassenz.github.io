@@ -144,18 +144,26 @@ body {
 .submenu {
     margin-top: 8px;
     margin-left: 15px;
-    display: none;
-}
-
-li[data-section="galleria"]:hover .submenu {
     display: block;
 }
 
 .submenu li {
-    padding: 5px;
+    padding: 5px 10px;
     font-size: 14px;
     color: var(--warning-yellow);
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
+
+.submenu li:hover {
+    background-color: rgba(255, 223, 0, 0.1);
+}
+
+.submenu li.active {
+    background-color: rgba(255, 223, 0, 0.2);
+    font-weight: bold;
+}
+
 
 /* Contenuto principale */
 .content {
@@ -213,7 +221,7 @@ p {
 .image-placeholder {
     background-color: var(--medium-gray);
     height: 300px;
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     border: 1px dashed var(--faint-green);
